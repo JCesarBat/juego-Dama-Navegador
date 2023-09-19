@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'Juego/estilos.css' %}">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Juego</title>
+</head>
+
+
+<body background="{% static 'Juego/tablero.jfif' %}"  >
+
+	
+
+	<a class="botones" id="boton1" href="{% url 'Mover' 0 %}">
+		{% if casillas.0.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.0.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+
+	<a class="botones" id="boton2" href="{% url 'Mover' 1 %}">
+		{% if casillas.1.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.1.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}</a>
+
+	<a class="botones" id="boton3" href="{% url 'Mover' 2 %}">
+		{% if casillas.2.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.2.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}</a>
+	<a class="botones" id="boton4" href="{% url 'Mover' 3 %}">
+		{% if casillas.3.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.3.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}</a>
+
+	<a class="botones" id="boton5" href="{% url 'Mover' 4 %}">
+		{% if casillas.4.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.4.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}</a>
+	<a class="botones" id="boton6" href="{% url 'Mover' 5 %}">
+		{% if casillas.5.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.5.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}</a>
+	<a class="botones" id="boton7" href="{% url 'Mover' 6 %}">
+		{% if casillas.6.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.6.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}</a>
+	<a class="botones" id="boton8" href="{% url 'Mover' 7 %}">
+		{% if casillas.7.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.7.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}</a>
+
+	<a class="botones" id="boton9" href="{% url 'Mover' 8 %}">
+		{% if casillas.8.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.8.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}</a>
+	<a class="botones" id="boton10" href="{% url 'Mover' 9 %}">
+		{% if casillas.9.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.9.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+	<a class="botones" id="boton11" href="{% url 'Mover' 10 %}">
+		{% if casillas.10.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.10.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+	<a class="botones" id="boton12" href="{% url 'Mover' 11 %}">
+		{% if casillas.11.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.11.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+
+
+	<a class="botones" id="boton13" href="{% url 'Mover' 12 %}">
+		{% if casillas.12.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.12.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+	<a class="botones" id="boton14" href="{% url 'Mover' 13 %}">
+		{% if casillas.13.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.13.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+	<a class="botones" id="boton15" href="{% url 'Mover' 14 %}">
+		{% if casillas.14.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.14.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+	<a class="botones" id="boton16" href="{% url 'Mover' 15 %}">
+		{% if casillas.15.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.15.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+
+	<a class="botones" id="boton17" href="{% url 'Mover' 16 %}">
+		{% if casillas.16.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.16.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+	<a class="botones" id="boton18" href="{% url 'Mover' 17 %}">
+		{% if casillas.17.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.17.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+	<a class="botones" id="boton19" href="{% url 'Mover' 18 %}">
+		{% if casillas.18.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.18.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+	<a class="botones" id="boton20" href="{% url 'Mover' 19 %}">
+		{% if casillas.19.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.19.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+	
+
+	<a class="botones" id="boton21" href="{% url 'Mover' 20 %}">
+		{% if casillas.20.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.20.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+	<a class="botones" id="boton22" href="{% url 'Mover' 21 %}">
+		{% if casillas.21.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.21.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+	<a class="botones" id="boton23" href="{% url 'Mover' 22 %}">
+		{% if casillas.22.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.22.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+	<a class="botones" id="boton24" href="{% url 'Mover' 23 %}">
+		{% if casillas.23.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.23.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+	
+
+	<a class="botones" id="boton25" href="{% url 'Mover' 24 %}">
+		{% if casillas.24.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.24.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+	<a class="botones" id="boton26" href="{% url 'Mover' 25 %}">
+			{% if casillas.25.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.25.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+		
+	</a>
+	<a class="botones" id="boton27" href="{% url 'Mover' 26 %}">	
+		{% if casillas.26.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.26.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}</a>
+	<a class="botones" id="boton28" href="{% url 'Mover' 27 %}">
+			{% if casillas.27.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.27.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+
+
+	<a class="botones" id="boton29" href="{% url 'Mover' 28 %}">
+			{% if casillas.28.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.28.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+	<a class="botones" id="boton30" href="{% url 'Mover' 29 %}">
+			{% if casillas.29.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.29.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+	<a class="botones" id="boton31" href="{% url 'Mover' 30 %}">
+			{% if casillas.30.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.30.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+	<a class="botones" id="boton32" href="{% url 'Mover' 31 %}">
+			{% if casillas.31.Color == 'Negras' %} 
+	 <img src="{% static 'Juego/fichaNegra.jpg' %}" class="Fichas"  >
+
+	 {% elif casillas.31.Color == 'Blancas' %} 
+	 <img src="{% static 'Juego/fichablanca.jpg' %}" class="Fichas"  >
+	 {% endif %}
+	</a>
+
+	
+
+</body>
+</html>
